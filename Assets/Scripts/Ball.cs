@@ -7,8 +7,8 @@ public class Ball : MonoBehaviour
 {
 
     [SerializeField] Paddle paddle1;
-    [SerializeField] float ballVelocityX;
-    [SerializeField] float ballVelocityY;
+    [SerializeField] float xPush = 2f;
+    [SerializeField] float yPush = 15f;
 
     Vector2 paddleToBallVector;
     bool hasStarted = false;
@@ -27,17 +27,14 @@ public class Ball : MonoBehaviour
             LockBallToPaddle();
             LaunchOnMouseClick();
         }
-        else
-        {
-            
-        }
     }
 
     private void LaunchOnMouseClick()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2 (ballVelocityX,ballVelocityY);
+            hasStarted = true;
+            GetComponent<Rigidbody2D>().velocity = new Vector2 (xPush,yPush);
         }
     }
 
