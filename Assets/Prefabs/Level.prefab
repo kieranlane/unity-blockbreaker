@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   breakableBlocks: 0
-  finalLevelIndex: 6
+  finalLevelIndex: 7
 --- !u!114 &8685952630174531021
 MonoBehaviour:
   m_ObjectHideFlags: 0

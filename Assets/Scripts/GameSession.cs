@@ -10,6 +10,7 @@ public class GameSession : MonoBehaviour
     [SerializeField] int pointsPerBlockDestroyed = 83;
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] string textBeforeScore = "Points: ";
+    [SerializeField] bool isAutoPlayEnabled;
 
     // State Variables
     [SerializeField] int currentScore = 0;
@@ -49,5 +50,10 @@ public class GameSession : MonoBehaviour
     public void ResetGame()
     {
         Destroy(gameObject);
+    }
+
+    public bool IsAutoPlayEnabled()
+    {
+        return isAutoPlayEnabled;
     }
 }
